@@ -12,12 +12,11 @@ Rails.application.routes.draw do
 #    end
 #  end
 
-
   namespace :api, :defaults => {:format => :json} do
-  namespace :v1 do
-    resources :artists, only: [:list, :show]
-    #resources :albums, only: [:list, :show]
-    #resources :songs, only: [:list, :show]
+    namespace :v1 do
+      resources :artist, only: [:index,:show]
+      #resources :albums, only: [:list, :show]
+      #resources :songs, only: [:list, :show]
     end
   end
 =begin
