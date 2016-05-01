@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :v1 do
     # this is what I had working 
     get 'artist/:artist_id/albums' => 'album#index', :as => :album
+    get 'artist/:artist_id/albums/:album_id/songs' => 'songs#index' ,  :as => :song
     resources :artist, only: [:index, :show]
     #resources :album, only: [:index, :show]
     #resources :songs, only: [:list, :show]
